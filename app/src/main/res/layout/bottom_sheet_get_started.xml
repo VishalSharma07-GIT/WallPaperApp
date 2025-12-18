@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/bg_bottom_sheet_rounded">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_marginTop="8dp"
+        android:layout_width="match_parent"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content"
+        android:text="Browse millions of cool wallpapers crafted by top designers."
+        android:textSize="30sp"
+        android:gravity="center"/>
+
+    <Button
+        android:id="@+id/btnGetStarted"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:text="Get Started"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:background="@drawable/bg_get_started_btn"
+        android:elevation="6dp"/>
+
+</LinearLayout>

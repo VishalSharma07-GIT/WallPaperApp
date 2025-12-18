@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/homeRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+
+    <ImageView
+        android:id="@+id/btnSearch"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_gravity="end"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/search_ic"
+        />
+
+
+
+
+    <LinearLayout
+        android:id="@+id/searchBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="64dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:elevation="10dp"
+        android:visibility="gone"
+        android:layout_gravity="top"
+        android:background="@drawable/search_bar_bg">
+
+
+    <EditText
+            android:id="@+id/etSearch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="search wallpapers..."
+            android:textSize="16sp"
+            android:padding="8dp"
+            android:background="@android:color/transparent"
+            android:imeOptions="actionSearch"
+            android:inputType="text" />
+
+        <ImageView
+            android:id="@+id/btnCloseSearch"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+
+            app:tint="#000" />
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/shimmerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:background="#EFEFEF">
+
+        <ProgressBar
+            android:layout_width="50dp"
+            android:layout_height="50dp"/>
+
+        <TextView
+            android:text="Loading Wallpapers..."
+            android:textSize="15sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"/>
+    </LinearLayout>
+
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvWallpapers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:clipToPadding="false"
+        android:scrollbars="vertical"
+        android:layout_marginTop="90dp"/>
+
+
+
+    <LinearLayout
+        android:id="@+id/errorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:text="Failed to load wallpapers"
+            android:textSize="18sp"
+            android:textColor="#333"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnRetry"
+            android:text="Retry"
+            android:layout_marginTop="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/noResultsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@android:drawable/ic_menu_search"
+            android:tint="#888" />
+
+        <TextView
+            android:layout_marginTop="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No wallpapers found"
+            android:textSize="18sp"
+            android:textColor="#555" />
+
+        <TextView
+            android:layout_marginTop="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Try searching something else"
+            android:textSize="14sp"
+            android:textColor="#777" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="250dp"
+        android:layout_height="66dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/bg_bottom_pill"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:elevation="12dp">
+
+        <ImageView
+            android:id="@+id/btnHome"
+            android:layout_width="62dp"
+            android:layout_height="42dp"
+            android:src="@drawable/ic_home"
+            android:padding="6dp"/>
+
+        <View
+            android:layout_width="40dp"
+            android:layout_height="1dp"/>
+
+        <ImageView
+            android:id="@+id/btnFavorites"
+            android:layout_width="65dp"
+            android:layout_height="42dp"
+            android:src="@drawable/ic_favorite_border"
+            android:padding="6dp"/>
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/fadeOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99000000"
+        android:visibility="gone"/>
+
+
+
+</FrameLayout>
+
+

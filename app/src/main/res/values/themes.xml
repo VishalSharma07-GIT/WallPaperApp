@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.WallPaperApp" parent="Theme.AppCompat.Light.NoActionBar">
+
+        <!-- No Android 12 splash screen attributes here -->
+        <item name="android:statusBarColor">@color/black</item>
+        <item name="android:navigationBarColor">@color/black</item>
+    </style>
+</resources>
